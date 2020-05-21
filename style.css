@@ -1,0 +1,214 @@
+body{
+
+}
+
+/* start upper bar */
+
+.upper-bar{
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f4f4f4;
+
+}
+
+/* end upper bar */
+
+/* start search-bar */
+
+.search-bar{
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+
+}
+
+.search-bar .navbar .navbar-brand{
+  font-size: 30px;
+  margin-right: 30px
+}
+
+.form-inline{
+  width: 740px;
+}
+
+.form-inline .form-control{
+  width: 70%;
+}
+
+.form-inline .btn{
+  width: 20%
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-size: 20px;
+}
+/* end search-bar */
+
+
+/* start product bar */
+
+.product-bar{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 110px;
+
+}
+
+.product-bar .nav .nav-item .nav-link{
+  padding: 0;
+}
+
+.span-bar{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* end product bar*/
+
+/* start slider */
+
+.slider{
+  background-color: #ddd;
+}
+
+.slider .carousel-item{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.slider .carousel-one{
+  background-image: url(nnn.jpg);
+}
+
+.slider .carousel-two{
+  background-image: url(nnn.jpg);
+}
+
+.slider .carousel-three{
+  background-image: url(nnn.jpg);
+}
+
+
+
+
+
+
+
+
+/* end slider */
+
+
+
+
+/* registre page */
+
+.registre-page{
+  width: 400px;
+  margin: 100px auto;
+  border: 2px solid #ddd;
+  padding: 20px;
+}
+.registre-page .form-control{
+
+}
+.registre-page .btn{
+  margin-top: 10px;
+}
+
+.registre-page label{
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.start{
+  color: red;
+}
+.errorr{
+  color: red;
+}
+
+/* registre page */
+
+/* sign in page*/
+.sign-in{
+  width: 400px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  padding: 20px;
+}
+.sign-in .form-control{
+  margin-bottom: 15px;
+}
+.sign-in .btn{
+  margin-top: 10px;
+}
+.sign-in label{
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.ert{
+  width: 400px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* sign in page*/
+
+/* create ad */
+
+.create-ad{
+  margin: 150px auto;
+  width: 335px;
+}
+
+.create-ad label{
+  display: block;
+  margin: 0;
+
+}
+
+.create-ad .input-number{
+  width: 100px;
+  display: block;
+}
+
+.create-ad .state{
+  width: 150px;
+}
+
+.create-ad .city{
+  width: 150px;
+
+}
+
+.create-ad .display-inline{
+  display: inline-block;
+}
+/* create ad */
+
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 10px;
+    ont-size: 18px;
+  }
+
+  /* update page */
+
+.update{
+width: 400px;
+margin: 200px auto;
+font-size: 25px;
+line-height: 52px
+}
+
+  /* update page */
