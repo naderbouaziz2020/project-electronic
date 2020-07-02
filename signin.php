@@ -37,16 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 <?php
   }
-
-
-
-
 }
 
-
 ?>
-
-
 
     <div class="sign-in">
       <h2>Sign-In</h2>

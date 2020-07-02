@@ -65,7 +65,7 @@ if (isset($_SESSION["telephone"])) {
      <div class="container">
        <ul class="nav justify-content-center">
          <li class="nav-item">
-           <a class="nav-link active" href="#"><i class="fas fa-home"></i>Home<span class="span-bar">|</span></a>
+           <a class="nav-link active" href="dashboard.php"><i class="fas fa-home"></i>Home<span class="span-bar">|</span></a>
          </li>
          <li class="nav-item">
            <a class="nav-link" href="telephone-page.php"><i class="fas fa-mobile-alt"></i>Telephone
@@ -214,7 +214,7 @@ if (isset($_SESSION["telephone"])) {
          <div class="col-lg-9">
            <div class="row">
              <?php
-                $sql = "SELECT * FROM product";
+                $sql = "SELECT * FROM product WHERE category = 'gaming'";
                 $stmt = $con->prepare($sql);
                 $stmt->execute();
                 $result = $stmt->fetchAll();

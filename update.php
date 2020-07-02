@@ -20,7 +20,7 @@ if (isset($_SESSION["telephone"])) {
     <div class="container">
       <div class="row">
         <div class="col">
-          Help & Contact
+          <i class="fas fa-phone-alt"></i>Help & Contact
         </div>
         <div class="col text-right">
           Sell on MyElectro
@@ -48,7 +48,7 @@ if (isset($_SESSION["telephone"])) {
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <?php echo $_SESSION["name"]; ?>
+              <i class="fas fa-user-alt"></i><?php echo $_SESSION["name"]; ?>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="update.php">Account Setting</a>
@@ -58,7 +58,7 @@ if (isset($_SESSION["telephone"])) {
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create-annonce.php">Create Annonce</a>
+            <a class="nav-link" href="create-annonce.php"><i class="fas fa-flag"></i>Create Annonce</a>
           </li>
         </ul>
       </div>
@@ -70,15 +70,26 @@ if (isset($_SESSION["telephone"])) {
 
   <!-- my information -->
   <div class="update">
-    <div class="container">
-      Name: <?php echo $row["name"]; ?>
-      <br>
-      Email: <?php echo $row["email"]; ?>
-      <br>
-      Telephone: <?php echo $row["telephone"]; ?>
-      <br>
-      Password: ******
-    </div>
+    <h2>Account information</h2>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td><?php echo $row["name"]; ?></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><?php echo $row["email"]; ?></td>
+  </tr>
+  <tr>
+    <td>Telephone</td>
+    <td><?php echo $row["telephone"]; ?></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>*******</td>
+  </tr>
+</table>
     <a href="account-setting.php">Modifier</a>
   </div>
 

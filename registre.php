@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $con->prepare($sql);
 
     $result = $stmt->execute([$name, $email, $telephone, $password]);
-    
+
     if ($result) {
       $_SESSION["telephone"] = $Telephone;
       $_SESSION["id"] = $row["id"];
