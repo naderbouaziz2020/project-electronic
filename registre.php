@@ -1,5 +1,5 @@
 <?php
-
+$title = "Registre";
 include 'header.php';
 
 include 'connectdb.php';

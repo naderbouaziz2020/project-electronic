@@ -3,6 +3,7 @@ session_start();
 if (isset($_SESSION["telephone"])) {
   header("Location: dashboard.php");
 }
+$title = "Sign-In";
 include 'header.php';
 
 include 'connectdb.php';
