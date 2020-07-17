@@ -4,7 +4,7 @@
       <div class="row" style="padding-bottom: 30px;">
         <div class="col-lg-5">
           <h1 style="margin-top: 25px;">My Web Site</h1>
-          <p>This website for selling and buy Electronic for example telephone, computer, camera ....</p>
+          <p>Ce site est destiné à l'achat et à la vente d'appareils électroniques, exemple (Ordinateur, Smartphone, Électroménager...).</p>
         </div>
         <div class="col-lg-3">
           <h3 style="margin-top: 25px;">Réseaux sociaux</h3>
@@ -28,8 +28,11 @@
 </footer>
 
 <script src="js/jquery-3.5.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.js"></script>
+<!--<script src="js/bootstrap.js.map"></script>-->
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -45,16 +45,19 @@ $title = "Telephone";
    </div>
 
    <!-- end slider -->
-
+   <div class="button-set">
+     <button class="afficher-filtre btn btn-primary" onclick="openForm()">Afficher le filtre</button>
+     <button onclick="closeForm()" class="afficher-filtre btn btn-primary">Cacher le filtre</button>
+   </div>
 
         <!-- start show & filter product -->
       <div class="filter-product">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-2">
-              <h5>Filter Product</h5>
+            <div class="col-lg-2 show-filtre" id="myForm">
+              <h5>Filtre de produit</h5>
               <hr>
-              <h6>Select State</h6>
+              <h6>Sélectionnez l'état</h6>
               <select class="" name="">
                 <option value=""></option>
 
@@ -69,31 +72,31 @@ $title = "Telephone";
                  <?php } ?>
               </select>
               <hr>
-              <h6>Select Gategory</h6>
+              <h6>Choisir une catégorie</h6>
               <ul class="list-unstyled">
-                <li><a href="telephone-page.php"><i class="fas fa-mobile-alt"></i>Telephone</a></li>
-                <li><a href="computer-page.php"><i class="fas fa-laptop"></i>Computer</a></li>
-                <li><a href="game-page.php"><i class="fas fa-gamepad"></i>Gaming accessories</a></li>
-                <li><a href="#"><i class="fas fa-home"></i>Home appliance</a></li>
-                <li><a href="#"><i class="fas fa-laptop-medical"></i>Computer science</a></li>
-                <li><a href="tv-page.php"><i class="fas fa-tv"></i>TV</a></li>
-                <li><a href="#"><i class="fas fa-camera"></i>Camera</a></li>
-                <li><a href="sound-page.php"><i class="fas fa-headphones"></i>Sound</a></li>
-                <li><a href="#"><i class="fas fa-window-maximize"></i>Printer</a></li>
-                <li><a href="#"><i class="fas fa-car-battery"></i>Electronic card</a></li>
-                <li><a href="#"><i class="fas fa-keyboard"></i>Computer accessories</a></li>
-                <li><a href="#"><i class="fas fa-tty"></i>Telephone accessories</a></li>
-                <li><a href="#"><i class="fas fa-laptop-house"></i>Game console</a></li>
-                <li><a href="#"><i class="fas fa-laptop"></i>Laptop</a></li>
-                <li><a href="#"><i class="fas fa-satellite-dish"></i>Cable</a></li>
-                <li><a href="#"><i class="fas fa-car-battery"></i>Electronic component</a></li>
-                <li><a href="#"><i class="fas fa-laptop-house"></i>Home & Garden</a></li>
+                <li><a href="telephone-home.php"><i class="fas fa-mobile-alt"></i>Smartphone</a></li>
+                <li><a href="computer-home.php"><i class="fas fa-laptop"></i>Ordinateur</a></li>
+                <li><a href="game-home.php"><i class="fas fa-gamepad"></i>Accessoires de jeux</a></li>
+                <li><a href="#"><i class="fas fa-home"></i>Électroménager</a></li>
+                <li><a href="#"><i class="fas fa-laptop-medical"></i>L'informatique</a></li>
+                <li><a href="tv-page.home"><i class="fas fa-tv"></i>TV</a></li>
+                <li><a href="#"><i class="fas fa-camera"></i>Caméra</a></li>
+                <li><a href="sound-page.php"><i class="fas fa-headphones"></i>Son</a></li>
+                <li><a href="#"><i class="fas fa-window-maximize"></i>Imprimante</a></li>
+                <li><a href="#"><i class="fas fa-car-battery"></i>Carte électronique</a></li>
+                <li><a href="#"><i class="fas fa-keyboard"></i>Accessoires de l'ordinateur</a></li>
+                <li><a href="#"><i class="fas fa-tty"></i>Accessoires téléphoniques</a></li>
+                <li><a href="#"><i class="fas fa-laptop-house"></i>Console de jeu</a></li>
+                <li><a href="#"><i class="fas fa-laptop"></i>Ordinateur portable</a></li>
+                <li><a href="#"><i class="fas fa-satellite-dish"></i>Câble</a></li>
+                <li><a href="#"><i class="fas fa-car-battery"></i>Composant élèctronique</a></li>
+                <li><a href="#"><i class="fas fa-laptop-house"></i>Maison & Jardin</a></li>
               </ul>
               <hr>
-              <h6>Select Brand</h6>
+              <h6>Sélectionnez la marque</h6>
               <ul class="list-group">
                 <?php
-                 $sql = "SELECT DISTINCT brand FROM product ORDER BY brand";
+                 $sql = "SELECT DISTINCT brand FROM product";
                  $stmt = $con->prepare($sql);
                  $stmt->execute();
                  $result = $stmt->fetchAll();
@@ -102,7 +105,7 @@ $title = "Telephone";
                    <li class="list-group-item">
                      <div class="form-check">
                        <label class="form-check-label">
-                         <input type="checkbox" class="form-check-input product_check" value="<?php echo $row["brand"]; ?>" id="brand"><?php echo $row["brand"]; ?>
+                         <input type="checkbox" name="startingReserves" class="form-check-input product_check" value="<?php echo $row["brand"]; ?>" id="<?php echo $row["brand"]; ?>"><?php echo $row["brand"]; ?>
                        </label>
                      </div>
                    </li>
@@ -122,7 +125,7 @@ $title = "Telephone";
                    <li class="list-group-item">
                      <div class="form-check">
                        <label class="form-check-label">
-                         <input type="checkbox" class="form-check-input product_check" value="<?php echo $row["etat"]; ?>" id="etat"><?php echo $row["etat"]; ?>
+                         <input type="checkbox" name="injured" class="form-check-input product_check" value="<?php echo $row["etat"]; ?>" id="<?php echo $row["etat"]; ?>"><?php echo $row["etat"]; ?>
                        </label>
                      </div>
                    </li>
@@ -133,24 +136,24 @@ $title = "Telephone";
             <div class="col-lg-9">
               <div class="row">
                 <?php
-                   $sql = "SELECT * FROM product WHERE category = 'telephone'";
+                   $sql = "SELECT * FROM product WHERE category = 'Smartphone'";
                    $stmt = $con->prepare($sql);
                    $stmt->execute();
                    $result = $stmt->fetchAll();
                    foreach ($result as $row) {
                 ?>
-                <div class="col-md-3 mb-2">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-2 player <?php echo $row['brand']. ' '.$row['etat']; ?>">
                   <div class="card-deck">
                     <form action="product-present-home.php" method="post">
                     <div class="card border-secondary">
                       <img src="upload/images/<?php echo $row["images"]; ?>" class="card-img-top">
                       <div class="card-body">
                          <h4 class="price-style"><?php echo $row["price"] . " DT"; ?></h4>
-                         <p><?php echo $row["title"]; ?></p>
-                         <p class="telephone-style"><?php echo "+216".$row["telephonez"]; ?></p>
-                         <p><?php echo $row["id_product"]; ?></p>
+                         <p style="font-weight: bold; color: #4d4d4d; margin-bottom: 7px;"><?php echo $row["title"]; ?></p>
+                         <p class="telephone-style"  style="font-weight: bold; color: #4d4d4d;"><?php echo "+216".$row["telephonez"]; ?></p>
+                         <p style="font-weight: bold; color: #4d4d4d;"><?php echo $row["etat"]; ?></p>
                          <input type="hidden" name="id_prod" value="<?php echo $row["id_product"]; ?>">
-                         <input type="submit" name="" value="view product" class="btn btn-primary">
+                         <input type="submit" name="" value="Afficher le produit" class="btn btn-primary">
                       </div>
                     </div>
 

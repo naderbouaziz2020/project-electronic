@@ -43,16 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
     <div class="sign-in">
-      <h2>Sign-In</h2>
+      <h2>Se connecter</h2>
       <form class="" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
-        <label for="">Telephone Number</label>
+        <label for="">Numéro de téléphone :</label>
         <input class="form-control" type="text" name="telephone" required="required">
-        <label for="">Password</label>
+        <label for="">Mot de passe :</label>
         <input class="form-control" type="password" name="pass" required="required">
-        <input class="btn btn-primary btn-block" type="submit" value="Sign-In">
+        <input class="btn btn-primary btn-block" type="submit" value="Se connecter">
       </form>
       <hr>
-      <a href="registre.php">Create acount.</a>
+      <a href="registre.php">Créer un compte.</a>
     </div>
 
 <?php

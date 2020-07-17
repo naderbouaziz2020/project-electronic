@@ -215,8 +215,8 @@ include 'upper-search.php';
          <select class="" name="etat">
            <option value=""></option>
            <option value="Neuf">Neuf</option>
-           <option value="Occasion(Très bonne état)">Occasion(Très bonne état)</option>
-           <option value="Occasion(En mauvais état)">Occasion(En mauvais état)</option>
+           <option value="Occasion(Très-bonne-état)">Occasion(Très-bonne-état)</option>
+           <option value="Occasion(En-mauvais-état)">Occasion(En-mauvais-état)</option>
          </select>
          <p class="errorr"><?php echo $etatMsg; ?></p>
          <label for="">Catégorie <span class="start">*</span></label>
@@ -255,6 +255,7 @@ include 'upper-search.php';
            <option value="Dell">Dell</option>
            <option value="Hp">Hp</option>
            <option value="Sharp">Sharp</option>
+           <option value="Autre">Autre</option>
          </select>
          <p class="errorr"><?php echo $brandMsg; ?></p>
          <label for="">Description <span class="start">*</span></label>

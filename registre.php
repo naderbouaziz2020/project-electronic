@@ -68,22 +68,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<nav class="navbar navbar-light">
-  <a class="navbar-brand text-center" href="homepage.php">Nader</a>
-</nav>
+
     <div class="registre-page">
-      <h2 class="text-center">Create Account</h2>
+      <h2 class="text-center">Créer un compte</h2>
       <form class="" action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
-        <label for="">Name <span class="start">*</span></label>
+        <label for="">Nom <span class="start">*</span></label>
         <input class="form-control" type="text" name="name">
         <p class="errorr"><?php echo $nameMsg; ?></p>
         <label for="">Email <span class="start">*</span></label>
         <input class="form-control" type="email" name="email">
         <p class="errorr"><?php echo $emailMsg; ?></p>
-        <label for="">Telephone <span class="start">*</span></label>
+        <label for="">Numéro de téléphone <span class="start">*</span></label>
         <input class="form-control" type="text" name="telephone">
         <p class="errorr"><?php echo $telephoneMsg; ?></p>
-        <label for="">Password <span class="start">*</span></label>
+        <label for="">Mot de passe <span class="start">*</span></label>
         <div class="input-box">
           <span>
             <i class="fas fa-eye" id="eye" onclick="myFunction()"></i>
@@ -91,11 +89,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <input class="form-control" type="password" name="password" id="myInput">
           <p class="errorr"><?php echo $passMsg; ?></p>
         </div>
-        <small id="passwordHelpInline" class="text-muted">Passwords must be at least 6 characters.</small>
-        <input class="btn btn-primary btn-block" type="submit" name="create-account" value="Create account">
+        <small id="passwordHelpInline" class="text-muted">Les mots de passe doivent contenir au moins 6 caractères.</small>
+        <input class="btn btn-primary btn-block" type="submit" name="create-account" value="Créer un compte">
       </form>
       <hr>
-      <p>Already have an account? <a href="signin.php">Sign In</a> </p>
+      <p>Vous avez déjà un compte? <a href="signin.php">Se connecter</a> </p>
     </div>
 
 

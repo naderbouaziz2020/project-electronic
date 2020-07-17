@@ -31,7 +31,7 @@
       </form>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="signin.php"><i class="fas fa-user-alt"></i>Sign In</a>
+          <a class="nav-link" href="signin.php"><i class="fas fa-user-alt"></i>Se connecter</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="signin.php"><i class="fas fa-flag"></i>Créer une annonce</a>
